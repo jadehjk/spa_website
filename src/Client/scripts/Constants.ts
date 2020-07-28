@@ -1,7 +1,9 @@
 
 const constants = {
    routes: {
-      root: '/',
+      home: '/',
+      aboutMe: '/aboutme',
+      projects: '/projects'
    }
 };
 

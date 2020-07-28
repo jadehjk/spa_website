@@ -1,5 +1,10 @@
 import * as React from 'react';
 import {withRouter, Route} from 'react-router-dom';
+import Constants from '../Constants';
+
+import INavbarItem from '../types/INavbarItem';
+import Projects from '../components/Projects';
+import Navbar from './Navbar';
 // import Constants from '../Constants';
 // import Header from './Layout/Header';
 // import Sidebar from './Layout/Sidebar';
@@ -14,7 +19,7 @@ import {withRouter, Route} from 'react-router-dom';
 // import {IAppStateContext, AppStateContext} from '../../AppState';
 // import {IMenuItem} from '../Core/Droplist';
 
-interface IRouteWithSidebarProps {
+interface IRouteWithNavbarrProps {
     component: any;
     path: string | Array<string>
     exact?: boolean;
@@ -25,9 +30,31 @@ interface IMasterProps {
    navbar?: boolean;
 }
 
-const RouteWithSidebar: React.FC<IRouteWithSidebarProps> = ({
+const RouteWithNavbar: React.FC<IRouteWithNavbarrProps> = ({
     ...routeProps
 }) => {
+    const {routes} = Constants;
+   
+    const navItems = React.useMemo((): ReadonlyArray<INavbarItem> => {
+
+        const result: INavbarItem[] = [{
+           name: 'Home',
+           to: routes.home
+        }];
+
+  
+        result.push({
+           name: 'About Me',
+           to: routes.aboutMe
+        });
+
+  
+        result.push({
+            name: 'Projects',
+            to: routes.projects
+        });  
+        return result;
+     }, []);
 
 
     return (
@@ -40,8 +67,9 @@ const RouteWithSidebar: React.FC<IRouteWithSidebarProps> = ({
         </header>
         <div className="container-fluid master-body">
             <div className="row">
-                {/* <Sidebar /> */}
-                Sidebar
+                {/* <Navbar /> */}
+                <Navbar navItems={navItems} />
+                
                 <div className="content-continer-full col-xs-12">
                     <Route {...routeProps} />
                 </div>
@@ -51,4 +79,6 @@ const RouteWithSidebar: React.FC<IRouteWithSidebarProps> = ({
    );
 };
 
-export default RouteWithSidebar;
+ 
+
+export default RouteWithNavbar;
