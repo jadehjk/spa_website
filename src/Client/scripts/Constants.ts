@@ -4,6 +4,9 @@ const constants = {
       home: '/',
       aboutMe: '/aboutme',
       projects: '/projects'
+   },
+   strings: {
+      appbarTitle: 'Jason Eun Pyo Lee'
    }
 };
 

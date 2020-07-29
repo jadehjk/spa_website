@@ -25,57 +25,13 @@ interface IRouteWithNavbarrProps {
     exact?: boolean;
  }
 
-interface IMasterProps {
-   children: any;
-   navbar?: boolean;
-}
-
 const RouteWithNavbar: React.FC<IRouteWithNavbarrProps> = ({
     ...routeProps
 }) => {
-    const {routes} = Constants;
-   
-    const navItems = React.useMemo((): ReadonlyArray<INavbarItem> => {
-
-        const result: INavbarItem[] = [{
-           name: 'Home',
-           to: routes.home
-        }];
-
-  
-        result.push({
-           name: 'About Me',
-           to: routes.aboutMe
-        });
-
-  
-        result.push({
-            name: 'Projects',
-            to: routes.projects
-        });  
-        return result;
-     }, []);
-
-
     return (
-        <>
-        <header>
-            <div className="container-fluid">
-                {/* <Header /> */}
-                header
-            </div>
-        </header>
         <div className="container-fluid master-body">
-            <div className="row">
-                {/* <Navbar /> */}
-                <Navbar navItems={navItems} />
-                
-                <div className="content-continer-full col-xs-12">
-                    <Route {...routeProps} />
-                </div>
-            </div>
+            <Route {...routeProps} />
         </div>
-        </>
    );
 };
 
