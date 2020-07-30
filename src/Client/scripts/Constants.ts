@@ -6,7 +6,11 @@ const constants = {
       projects: '/projects'
    },
    strings: {
-      appbarTitle: 'Jason Eun Pyo Lee'
+      appbarTitle: 'Jason Lee'
+   },
+   links: {
+      github: 'https://github.com/EunPyoLee/',
+      linkedIn: 'https://www.linkedin.com/in/eun-pyo-jason-lee-86466214b/'
    }
 };
 

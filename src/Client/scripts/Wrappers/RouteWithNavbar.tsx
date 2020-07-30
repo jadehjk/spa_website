@@ -4,7 +4,6 @@ import Constants from '../Constants';
 
 import INavbarItem from '../types/INavbarItem';
 import Projects from '../components/Projects';
-import Navbar from './Navbar';
 // import Constants from '../Constants';
 // import Header from './Layout/Header';
 // import Sidebar from './Layout/Sidebar';
