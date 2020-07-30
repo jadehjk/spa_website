@@ -1,6 +1,52 @@
+@import '../vars.scss';
+
 .appbar-wrapper{
 
 }
+
 .appbar-toolbar {
     justify-content: space-between;
+    background-color: $color_white;
+    
+    .droppable-menu-btn{
+        &:hover {
+            background-color: transparent;
+        }
+
+        .droppable-menu-icon{
+            color: $font_color_black;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    
+
+    .appbar-title {
+        padding-right: 90px;
+        font-weight: $title_weight;
+        color: $font_color_black;
+        font-family: $title_font_family;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    
+    .appbar-external-links {
+        color: $font_color_black;
+        margin-bottom: 5px;
+        
+        a {
+            &:hover {
+                color: $color_lg_blue;
+                opacity: 0.6;
+            }
+        }
+
+        svg {
+            padding: 0 7px 0 7px;
+            width: 22px;
+        }
+    }
 }
