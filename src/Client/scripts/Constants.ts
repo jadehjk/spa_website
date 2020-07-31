@@ -12,7 +12,7 @@ const constants = {
       github: 'https://github.com/EunPyoLee/',
       linkedIn: 'https://www.linkedin.com/in/eun-pyo-jason-lee-86466214b/'
    },
-   email: 'eunpyolee0420@gmail.com'
+   email: 'eunpyolee0420@gmail.com',
 };
 
 export default Object.freeze(constants);

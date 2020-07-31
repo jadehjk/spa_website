@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Grid from '@material-ui/core/Grid';
 
 import Constants from '../Constants';
 
@@ -8,16 +9,14 @@ const Footer: React.FC<{}> = () => {
     const {links:{linkedIn}, email} = Constants;
 
     return(
-        
         <div className="footer">
             <div className="footer-col left">
                 <p>
                     <p><span className="footer-title">CONTACT</span></p>
-                        <p className="footer-content-row">
-                            <span className="footer-content">{email}</span>
-                            <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
-                        </p>
-                        {/* <p><a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a></p> */}
+                    <p className="footer-content-row">
+                        <span className="footer-content">{email}</span>
+                        <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
+                    </p>
                 </p>
                 
             </div>
