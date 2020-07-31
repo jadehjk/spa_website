@@ -3,7 +3,7 @@ import {withRouter, Route} from 'react-router-dom';
 import Constants from '../Constants';
 
 import INavbarItem from '../types/INavbarItem';
-import Projects from '../components/Projects';
+import Projects from '../Components/Projects';
 // import Constants from '../Constants';
 // import Header from './Layout/Header';
 // import Sidebar from './Layout/Sidebar';
