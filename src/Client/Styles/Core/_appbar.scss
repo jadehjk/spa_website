@@ -1,26 +1,22 @@
 @import '../vars.scss';
 
-.appbar-wrapper{
-
-}
-
 .appbar-toolbar {
     justify-content: space-between;
     background-color: $color_white;
-    
-    .droppable-menu-btn{
+
+    .droppable-menu-btn {
+
         &:hover {
             background-color: transparent;
         }
 
-        .droppable-menu-icon{
+        .droppable-menu-icon {
             color: $font_color_black;
             &:hover {
                 opacity: 0.6;
             }
         }
     }
-    
 
     .appbar-title {
         padding-right: 90px;

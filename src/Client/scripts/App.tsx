@@ -7,17 +7,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import GetAppIcon from '@material-ui/icons/GetApp';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Dialog from '@material-ui/core/Dialog';
 
-import Projects from './components/Projects';
+import Projects from './Components/Projects';
 import Constants from './Constants';
-
-import Home from './components/Home';
-import AboutMe from './components/AboutMe';
+import Home from './Components/Home';
+import AboutMe from './Components/AboutMe';
 import RouteWithNavbar from './Wrappers/RouteWithNavbar';
+import Footer from './Core/Footer';
 
 import {ReactComponent as IconBrandLinkedin} from '../Logos/Brand/linkedin.svg';
 import {ReactComponent as IconBrandGithub} from '../Logos/Brand/github.svg';
@@ -31,8 +30,8 @@ const {appbarTitle} = strings;
 
 const App: React.FC<{}> = () => {
    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
    const [resumeOpen, setResumeOpen] = React.useState<boolean>(false);
+
    const handleClose = (): void => {
       setAnchorEl(null);
    };
@@ -56,7 +55,7 @@ const App: React.FC<{}> = () => {
          return Object.entries(menuItemLinks).map(([name, link]) => (
             <MenuItem
                onClick={handleClose}
-               children={<Link to={link}>{name}</Link>}
+               children={<Link to={link}><span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span></Link>}
             />
          ));
    };
@@ -76,7 +75,6 @@ const App: React.FC<{}> = () => {
                   <MenuIcon className="droppable-menu-icon"/>
                </IconButton>
                <Menu
-                  className="droppable-menu"
                   anchorEl={anchorEl}
                   anchorOrigin={{
                      vertical: 'top',
@@ -103,6 +101,7 @@ const App: React.FC<{}> = () => {
             <RouteWithNavbar exact path={aboutMe} component={AboutMe} />
             <RouteWithNavbar exact path={projects} component={Projects} />
          </Switch>
+         <Footer/>
       </BrowserRouter>
    );
 }
