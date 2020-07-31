@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Switch, BrowserRouter} from 'react-router-dom';
+import {Switch, BrowserRouter, Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -15,7 +15,6 @@ import Projects from './Components/Projects';
 import Constants from './Constants';
 import Home from './Components/Home';
 import AboutMe from './Components/AboutMe';
-import RouteWithNavbar from './Wrappers/RouteWithNavbar';
 import Footer from './Core/Footer';
 
 import {ReactComponent as IconBrandLinkedin} from '../Logos/Brand/linkedin.svg';
@@ -23,12 +22,13 @@ import {ReactComponent as IconBrandGithub} from '../Logos/Brand/github.svg';
 import {ReactComponent as IconFilesResume} from '../Logos/Files/resume.svg';
 
 
-const {routes, strings, links} = Constants;
-const {home, aboutMe, projects} = routes;
-const {github, linkedIn} = links;
-const {appbarTitle} = strings;
-
 const App: React.FC<{}> = () => {
+
+   const {routes, strings, links} = Constants;
+   const {home, aboutMe, projects} = routes;
+   const {github, linkedIn} = links;
+   const {appbarTitle} = strings;
+
    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
    const [resumeOpen, setResumeOpen] = React.useState<boolean>(false);
 
@@ -53,10 +53,12 @@ const App: React.FC<{}> = () => {
 
    const renderDropMenuItems = (): ReadonlyArray<React.ReactNode> => {
          return Object.entries(menuItemLinks).map(([name, link]) => (
-            <MenuItem
-               onClick={handleClose}
-               children={<Link to={link}><span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span></Link>}
-            />
+            <Link to={link}>
+               <MenuItem
+                  onClick={handleClose}
+                  children={<span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span>}
+               />
+            </Link>
          ));
    };
 
@@ -69,7 +71,6 @@ const App: React.FC<{}> = () => {
                <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
                <a className="resume-link" title="Download Resume" onClick={handleResumeClick}><IconFilesResume/></a>
             </Typography>
-            
                <Typography variant="h5" className="appbar-title"> <Link to={home}>{appbarTitle} </Link></Typography>
                <IconButton className="droppable-menu-btn" edge="start" color="inherit" aria-label="menu" onClick={handleMenuOnClick}>
                   <MenuIcon className="droppable-menu-icon"/>
@@ -91,16 +92,16 @@ const App: React.FC<{}> = () => {
                   {renderDropMenuItems()}
                </Menu>
             </Toolbar>
-            
          </AppBar>
          <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
-               <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
-            </Dialog>
+            <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
+         </Dialog>
          <Switch>
-            <RouteWithNavbar exact path={home} component={Home} />
-            <RouteWithNavbar exact path={aboutMe} component={AboutMe} />
-            <RouteWithNavbar exact path={projects} component={Projects} />
+            <Route exact path={home} component={Home} />
+            <Route exact path={aboutMe} component={AboutMe} />
+            <Route exact path={projects} component={Projects} />
          </Switch>
+         <div className="padding-div"/>
          <Footer/>
       </BrowserRouter>
    );

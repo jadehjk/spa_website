@@ -41,10 +41,14 @@ a {
                 vertical-align: middle;
             }
 
-            svg {
-                width: 25px;
-                padding-left: 10px;
-            }
+            a{
+                padding-top: 5px;
+                svg {
+                    width: 22px;
+                    height: 20px;
+                    padding-left: 10px;
+                }
+            }            
         }
 
         .footer-content-row {
@@ -52,8 +56,6 @@ a {
             flex-direction: row;
             align-items: center;
         }
-
-
 
         .footer-title {
             color: $font_color_white;
@@ -68,4 +70,11 @@ a {
     .right {
         margin-right: 20px;
     }
+}
+
+.padding-div {
+    display: block;
+    padding: 20px 0;
+    height: 20px;
+    width: 100%;
 }
