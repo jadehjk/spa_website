@@ -7,8 +7,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import Dialog from '@material-ui/core/Dialog';
+
 import Projects from './components/Projects';
 import Constants from './Constants';
 
@@ -29,6 +32,7 @@ const {appbarTitle} = strings;
 const App: React.FC<{}> = () => {
    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
+   const [resumeOpen, setResumeOpen] = React.useState<boolean>(false);
    const handleClose = (): void => {
       setAnchorEl(null);
    };
@@ -42,6 +46,11 @@ const App: React.FC<{}> = () => {
       'About Me':aboutMe,
       'Projects': projects
    };
+
+  
+   const handleResumeClick = (): void => {
+      setResumeOpen(!resumeOpen)
+   }
 
    const renderDropMenuItems = (): ReadonlyArray<React.ReactNode> => {
          return Object.entries(menuItemLinks).map(([name, link]) => (
@@ -59,7 +68,7 @@ const App: React.FC<{}> = () => {
             <Typography variant="subtitle2" className="appbar-external-links">
                <a href={github} target="_blank" title="Go to Github Repo"><IconBrandGithub /></a>
                <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
-               <a className="resume-link" download href="Uploads/Resume_Eun Pyo Jason Lee.pdf" title="Download Resume"><IconFilesResume/></a>
+               <a className="resume-link" title="Download Resume" onClick={handleResumeClick}><IconFilesResume/></a>
             </Typography>
             
                <Typography variant="h5" className="appbar-title"> <Link to={home}>{appbarTitle} </Link></Typography>
@@ -84,7 +93,11 @@ const App: React.FC<{}> = () => {
                   {renderDropMenuItems()}
                </Menu>
             </Toolbar>
+            
          </AppBar>
+         <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
+               <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
+            </Dialog>
          <Switch>
             <RouteWithNavbar exact path={home} component={Home} />
             <RouteWithNavbar exact path={aboutMe} component={AboutMe} />
