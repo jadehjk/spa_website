@@ -6,7 +6,66 @@ body {
 
 a {
     text-decoration: none;
-    &:visited {
+    color: $font_color_black;
+    &:visited{
         color: inherit;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $footer_color_black;
+    color: $font_color_grey;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: $title_font_family;
+    font-size: $font_size_sm;
+    font-weight: $footer_wieght;
+    align-items: center;
+    border-color: $color_black;
+
+    .footer-col {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        p {
+            margin: 0;
+
+            .footer-content {
+                font-family: $text_font_family;
+                vertical-align: middle;
+            }
+
+            svg {
+                width: 25px;
+                padding-left: 10px;
+            }
+        }
+
+        .footer-content-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+
+
+        .footer-title {
+            color: $font_color_white;
+            font-size: $font_size_md;
+        }
+    }
+
+    .left {
+        margin-left: 20px;
+    }
+
+    .right {
+        margin-right: 20px;
     }
 }

@@ -55,7 +55,7 @@ const App: React.FC<{}> = () => {
          return Object.entries(menuItemLinks).map(([name, link]) => (
             <MenuItem
                onClick={handleClose}
-               children={<Link to={link}>{name}</Link>}
+               children={<Link to={link}><span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span></Link>}
             />
          ));
    };
@@ -75,7 +75,6 @@ const App: React.FC<{}> = () => {
                   <MenuIcon className="droppable-menu-icon"/>
                </IconButton>
                <Menu
-                  className="droppable-menu"
                   anchorEl={anchorEl}
                   anchorOrigin={{
                      vertical: 'top',
