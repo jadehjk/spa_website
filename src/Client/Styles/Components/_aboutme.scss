@@ -1,0 +1,115 @@
+@import '../vars.scss';
+
+.aboutme-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15%;
+
+
+    @media only screen and (min-width: 62em){
+        padding: 50px 100px;
+        flex-direction: row;
+        align-items: unset;
+    }
+    
+    .aboutme-title {
+        display:flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        .title-text {
+            font-size: 40px;
+            font-weight: $title_weight;
+            font-family: $page_title_font_family;
+        }
+    }
+
+    .profile-wrapper{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        @media only screen and (min-width: 62em){
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+        }
+        
+
+        .image-wrapper{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            padding: 0;
+    
+            @media only screen and (min-width: 62em){
+                justify-content: flex-end;
+                padding:0;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 3px;
+                box-shadow: $box_shadow_card;
+                opacity: 0.9;
+            }
+        }
+    
+        .intro-wrapper{
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+    
+            @media only screen and (min-width: 62em){
+                justify-content: flex-start;
+                padding:0;
+            }
+        }
+    }
+    
+
+    .card-row{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+
+        @media only screen and (min-width: 75em){
+            margin-top: 0;
+            padding-left: 20px;
+        }
+
+        .card-item-wrapper{
+            padding: 3px;
+            @media only screen and (min-width: 75em){
+                padding: 2px;
+            }
+        }
+    }
+}
+
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15%;
+    
+    .link-item {
+        padding: 0 15px;
+        text-align: center;
+        flex-basis: unset;
+
+        .link-item-text {
+            font-size: $font_size_lg;
+            font-family: $text_font_family;
+            color: $font_color_green;
+        }
+    }
+}
