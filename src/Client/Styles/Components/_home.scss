@@ -1,7 +1,8 @@
 @import '../vars.scss';
 
 .home-wrapper {
-    padding: 50px 20px;
+    padding: 70px 5%;
+    justify-content: space-evenly;
     
     .image-text {
         position: absolute;
@@ -9,6 +10,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: $font_size_image_text;
+        text-align: center;
         color: $font_color_white;
     }
     .home-image-wrapper:hover{
