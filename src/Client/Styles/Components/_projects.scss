@@ -1,0 +1,9 @@
+@import '../vars.scss';
+
+.header-wrapper{
+    text-align: center;
+
+    @media only screen and (min-width: 60em) { //Material UI Grid md's base width
+        text-align: unset;
+    }
+}

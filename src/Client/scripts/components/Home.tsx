@@ -7,47 +7,52 @@ import CardMedia from '@material-ui/core/CardMedia';
 
 import Constants from '../Constants';
 
-import homeImage1 from '../../Images/Home/homeImage1.jpg';
-import homeImage2 from '../../Images/Home/homeImage2.png';
+import {imageStyle} from '../../Styles/Components/StyleHome';
 
 const Home: React.FC<{}> = () => {
 
-   const {routes: {aboutMe,projects}} = Constants;
-
-   const imageStyle = {
-      height: 0, 
-      paddingTop: '70.25%',
-      verticalAlign: 'middle',
-      opacity: 0.95
-   };
+   const {
+      routes: {
+         aboutMe,
+         projects
+      },
+      contents: {
+         homeContents : {
+            homeContentTitle1,
+            homeContentTitle2,
+            homeImgSrc1,
+            homeImgSrc2
+         }
+      }
+   } = Constants;
 
    return (
       <div className="home-wrapper">
-         <Grid className="home-grid-row" container spacing={4} style={{justifyContent: 'center'}}>
-            <Grid item xs={10} lg={6} className="home-grid-col">
+         <Grid className="home-grid-row" container spacing={9} style={{justifyContent: 'center'}}>
+            <Grid item xs={12} lg={6} className="home-grid-col">
                <CardActionArea className="card-wrapper">
                   <Link to={aboutMe}>
                   <div className="home-image-wrapper">
                      <CardMedia
                         style={imageStyle}
-                        image={homeImage1}
+                        image={homeImgSrc1}
                         title="About Me"
                      />
-                     <div className="image-text">ABOUT ME</div>
+                     <div className="image-text">{homeContentTitle1}</div>
                   </div>
                   </Link>
                </CardActionArea>
             </Grid>
-            <Grid item xs={10} lg={6} className="home-grid-col">
+            <Grid item xs={12} lg={6} className="home-grid-col">
                <CardActionArea className="card-wrapper">
                   <Link to={projects}>
                   <div className="home-image-wrapper">
                      <CardMedia
                         style={imageStyle}
-                        image={homeImage2}
+                        image={homeImgSrc2}
                         title="PROJECTS"
                      />
-                     <div className="image-text">PROJECTS</div>
+                     <div className="image-text">{homeContentTitle2}</div>
                   </div>
                   </Link>
                </CardActionArea>
