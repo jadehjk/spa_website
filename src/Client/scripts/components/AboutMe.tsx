@@ -7,16 +7,14 @@ import Dialog from '@material-ui/core/Dialog';
 
 import Constants from '../Constants';
 
-import aboutMeImage from '../../Images/AboutMe/profile.jpg';
-
-
+import {introCardStyle, keynumberTextStyle, introTextStyle, keynumberCardStyle} from '../../Styles/Components/StyleAboutMe';
 
 
 const AboutMe: React.FC<{}> = () => {
 
    const {links: {github, linkedIn}, contents: {aboutMeContents}} = Constants;
 
-   const {profileCard: {title, subtitle, bodyContents, keynumberCards}} = aboutMeContents;
+   const {profileCard: {title, subtitle, profileImgSrc, bodyContents, keynumberCards}} = aboutMeContents;
 
    const [resumeOpen, setResumeOpen] = React.useState<boolean>(false);
 
@@ -27,13 +25,11 @@ const AboutMe: React.FC<{}> = () => {
     const renderContentLines = (contentLines: ReadonlyArray<string>): ReadonlyArray<React.ReactNode> => {
         return contentLines.map((content, i) => (
             <>
-                {i > 0 && (
-                    <br/>
-                )}
+                {i > 0 && (<br/>)}
                 {content}
             </>
         ))
-    }
+    };
 
     const renderKeyNumberCard = ():ReadonlyArray<React.ReactNode> => {
         // [important] use only 4 cards!!!
@@ -54,26 +50,6 @@ const AboutMe: React.FC<{}> = () => {
 
     };
 
-   const introCardStyle = {
-       width: '100%'
-    }
-
-   const keynumberTextStyle = {
-       fontSize : '12px'
-    }
-
-   const introTextStyle = {
-        fontSize : '13px'
-    }
-
-   const keynumberCardStyle = {
-        width: '100%',
-        height: '100%',
-        border: 0,
-        borderRadius: 3,
-        color: '#14b1ab'
-    }
-
    return (
         <>
             <div className="row aboutme-wrapper">
@@ -82,7 +58,7 @@ const AboutMe: React.FC<{}> = () => {
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-8 profile-wrapper">
                     <div className="col-sm-12 col-md-4 col-lg-4 image-wrapper" >
-                        <img src={aboutMeImage} />
+                        <img src={profileImgSrc} />
                     </div>
                     <div className="col-sm-12 col-md-8 col-lg-8 intro-wrapper">
                         <Card style={introCardStyle}>
