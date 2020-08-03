@@ -55,8 +55,8 @@ const App: React.FC<{}> = () => {
    }
 
    const renderDropMenuItems = (): ReadonlyArray<React.ReactNode> => {
-         return Object.entries(menuItemLinks).map(([name, link]) => (
-            <Link to={link}>
+         return Object.entries(menuItemLinks).map(([name, link], i) => (
+            <Link to={link} key={i}>
                <MenuItem
                   onClick={handleClose}
                   children={<span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span>}
