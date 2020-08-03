@@ -10,6 +10,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Dialog from '@material-ui/core/Dialog';
+import Grid from '@material-ui/core/Grid';
 
 import Projects from './Components/Projects';
 import Constants from './Constants';
@@ -20,6 +21,8 @@ import Footer from './Core/Footer';
 import {ReactComponent as IconBrandLinkedin} from '../Logos/Brand/linkedin.svg';
 import {ReactComponent as IconBrandGithub} from '../Logos/Brand/github.svg';
 import {ReactComponent as IconFilesResume} from '../Logos/Files/resume.svg';
+
+import {appbarStyle, appbarRowStyle, appbarDropMenuButtonStyle} from '../Styles/StyleApp';
 
 
 const App: React.FC<{}> = () => {
@@ -52,8 +55,8 @@ const App: React.FC<{}> = () => {
    }
 
    const renderDropMenuItems = (): ReadonlyArray<React.ReactNode> => {
-         return Object.entries(menuItemLinks).map(([name, link]) => (
-            <Link to={link}>
+         return Object.entries(menuItemLinks).map(([name, link], i) => (
+            <Link to={link} key={i}>
                <MenuItem
                   onClick={handleClose}
                   children={<span style={{fontFamily: 'Gloria Hallelujah'}}>{name}</span>}
@@ -65,32 +68,40 @@ const App: React.FC<{}> = () => {
    return (
       <BrowserRouter>
          <AppBar className="appbar-wrapper" position="static" >
-            <Toolbar className="appbar-toolbar">
-            <Typography variant="subtitle2" className="appbar-external-links">
-               <a href={github} target="_blank" title="Go to Github Repo"><IconBrandGithub /></a>
-               <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
-               <a className="resume-link" title="Download Resume" onClick={handleResumeClick}><IconFilesResume/></a>
-            </Typography>
-               <Typography variant="h5" className="appbar-title"> <Link to={home}>{appbarTitle} </Link></Typography>
-               <IconButton className="droppable-menu-btn" edge="start" color="inherit" aria-label="menu" onClick={handleMenuOnClick}>
-                  <MenuIcon className="droppable-menu-icon"/>
-               </IconButton>
-               <Menu
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                     vertical: 'top',
-                     horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                     vertical: 'top',
-                     horizontal: 'right',
-                  }}
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-               >
-                  {renderDropMenuItems()}
-               </Menu>
+            <Toolbar className="appbar-toolbar" style={appbarStyle}>
+               <Grid container direction="row" style={appbarRowStyle}>
+                  <Grid item xs={4}>
+                     <Typography variant="subtitle2" className="appbar-external-links">
+                        <a href={github} target="_blank" title="Go to Github Repo"><IconBrandGithub /></a>
+                        <a href={linkedIn} target="_blank" title="Go to Linkedin"><IconBrandLinkedin className="linkedIn-logo" /></a>
+                        <a className="resume-link" title="Download Resume" onClick={handleResumeClick}><IconFilesResume/></a>
+                     </Typography>
+                  </Grid>
+                  <Grid item xs={4} style={{textAlign: 'center'}}>
+                     <Typography variant="h5" className="appbar-title"> <Link to={home}>{appbarTitle} </Link></Typography>
+                  </Grid>
+                  <Grid item xs={4}  style={{textAlign: 'end'}}>
+                     <IconButton className="droppable-menu-btn" edge="start" color="inherit" aria-label="menu" style={appbarDropMenuButtonStyle} onClick={handleMenuOnClick}>
+                        <MenuIcon className="droppable-menu-icon"/>
+                     </IconButton>
+                     <Menu
+                        anchorEl={anchorEl}
+                        anchorOrigin={{
+                           vertical: 'top',
+                           horizontal: 'right',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                           vertical: 'top',
+                           horizontal: 'right',
+                        }}
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}
+                     >
+                        {renderDropMenuItems()}
+                     </Menu>
+                  </Grid>
+               </Grid>
             </Toolbar>
          </AppBar>
          <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>

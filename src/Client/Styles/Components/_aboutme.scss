@@ -29,7 +29,6 @@
     .profile-wrapper{
         display:flex;
         flex-direction: column;
-        align-items: center;
         padding: 0;
 
         @media only screen and (min-width: 62em){
@@ -49,13 +48,6 @@
                 justify-content: flex-end;
                 padding:0;
             }
-
-            img {
-                width: 100%;
-                border-radius: 3px;
-                box-shadow: $box_shadow_card;
-                opacity: 0.9;
-            }
         }
     
         .intro-wrapper{
@@ -63,7 +55,6 @@
             justify-content: center;
             height: 100%;
             width: 100%;
-            padding: 0;
     
             @media only screen and (min-width: 62em){
                 justify-content: flex-start;
@@ -85,11 +76,50 @@
         }
 
         .card-item-wrapper{
-            padding: 3px;
-            @media only screen and (min-width: 75em){
-                padding: 2px;
+            &.card0 {
+                padding-right: 2px;
+                padding-bottom: 2px;
+                @media only screen and (min-width: 62em){
+                    padding-bottom: 0;
+                }
+                @media only screen and (min-width: 75em){
+                    padding-bottom: 2px;
+                }
+            }
+            &.card1 {
+                padding-left: 2px;
+                padding-bottom: 2px;
+                @media only screen and (min-width: 62em){
+                    padding-bottom: 0;
+                    padding-right: 2px;
+                }
+                @media only screen and (min-width: 75em){
+                    padding-bottom: 2px;
+                }
+            }
+            &.card2 {
+                padding-right: 2px;
+                padding-top: 2px;
+                @media only screen and (min-width: 62em){
+                    padding-top: 0;
+                    padding-left: 2px;
+                }
+                @media only screen and (min-width: 75em){
+                    padding-top: 2px;
+                }
+            }
+            &.card3 {
+                padding-left: 2px;
+                padding-top: 2px;
+                @media only screen and (min-width: 62em){
+                    padding-top: 0;
+                }
+                @media only screen and (min-width: 75em){
+                    padding-top: 2px;
+                }
             }
         }
+        
     }
 }
 

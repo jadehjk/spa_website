@@ -1,5 +1,6 @@
 export const introCardStyle = {
-    width: '100%'
+    width: '100%',
+    height: '100%'
  }
 
 export const keynumberTextStyle = {
@@ -16,4 +17,11 @@ export const keynumberCardStyle = {
     border: 0,
     borderRadius: 3,
     color: '#14b1ab'
+ }
+
+ export const imgStyle = {
+    verticalAlign: 'middle',
+    padding: '50%',
+    borderRadius: '3px',
+    opacity: 0.9
  }

@@ -1,13 +1,16 @@
 import * as React from 'react';
 
 import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Dialog from '@material-ui/core/Dialog';
 
+import classnames from 'classnames';
+
 import Constants from '../Constants';
 
-import {introCardStyle, keynumberTextStyle, introTextStyle, keynumberCardStyle} from '../../Styles/Components/StyleAboutMe';
+import {introCardStyle, keynumberTextStyle, introTextStyle, keynumberCardStyle, imgStyle} from '../../Styles/Components/StyleAboutMe';
 
 
 const AboutMe: React.FC<{}> = () => {
@@ -33,8 +36,8 @@ const AboutMe: React.FC<{}> = () => {
 
     const renderKeyNumberCard = ():ReadonlyArray<React.ReactNode> => {
         // [important] use only 4 cards!!!
-        return keynumberCards.map(card => (
-            <div className="col-sm-6 col-md-3 col-lg-6 card-item-wrapper">
+        return keynumberCards.map((card, i) => (
+            <div className={classnames("col-sm-6", "col-md-3", "col-lg-6", "card-item-wrapper", `card${i}`)}>
                 <Card style={keynumberCardStyle}>
                     <CardContent >
                         <Typography variant="h4" component="h4">
@@ -58,7 +61,10 @@ const AboutMe: React.FC<{}> = () => {
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-8 profile-wrapper">
                     <div className="col-sm-12 col-md-4 col-lg-4 image-wrapper" >
-                        <img src={profileImgSrc} />
+                        <CardMedia
+                            image={profileImgSrc}
+                            style={imgStyle}
+                        />
                     </div>
                     <div className="col-sm-12 col-md-8 col-lg-8 intro-wrapper">
                         <Card style={introCardStyle}>
@@ -100,6 +106,7 @@ const AboutMe: React.FC<{}> = () => {
             <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
                 <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
             </Dialog>
+            
         </>
     );
 }

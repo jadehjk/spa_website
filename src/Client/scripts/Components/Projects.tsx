@@ -57,8 +57,8 @@ const Projects: React.FC<{}> = () => {
     const renderContentList = (lines: ReadonlyArray<string>): React.ReactNode => {
         return (
             <ul>
-                {lines.map(line => (
-                    <li>
+                {lines.map((line, i) => (
+                    <li key={i}>
                         {line}
                     </li>
                 ))}

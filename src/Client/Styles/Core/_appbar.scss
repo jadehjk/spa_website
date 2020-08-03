@@ -19,7 +19,6 @@
     }
 
     .appbar-title {
-        padding-right: 90px;
         font-weight: $title_weight;
         color: $font_color_black;
         font-family: $appbar_title_font_family;
@@ -31,7 +30,6 @@
     
     .appbar-external-links {
         color: $font_color_black;
-        margin-bottom: 5px;
         
         a {
             &:hover {
