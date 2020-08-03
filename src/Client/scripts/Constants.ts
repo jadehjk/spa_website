@@ -52,7 +52,7 @@ const constants = {
                },
                {
                   keyNumber: '23',
-                  text: 'he started programming after his internship at a blockchain Startup called "Edenchain"' 
+                  text: 'he was 23 when he first started programming after his internship at a blockchain Startup called "Edenchain"' 
                },
             ]
          }
@@ -71,9 +71,9 @@ const constants = {
                header: 'SPA Personal Website',
                subHeader: ['August, 2020' , 'Collaborated with Jade Kim'],
                cardContent: [
-                  'Loads only a single page and router dynamically changes contents',
-                  'Styled with MaterialUI and custom CSS including flexble grid with cross-browser compatibility',
-                  'Easy to update information by changing contents in Constants file'
+                  'Loads a single page and uses react-router to dynamically change contents',
+                  'Styled with MaterialUI and custom CSS including flexble grid to support cross-browser compatibility',
+                  'Easy to update and manage information by updating a single Constants file'
                ]
             },
             {
@@ -87,9 +87,9 @@ const constants = {
                header: 'Jade VS Jason',
                subHeader: ['May, 2020' , 'Collaborated with Jade Kim'],
                cardContent: [
-                  'Cannonball shooting game built on top of physics engine Matter.js',
+                  'Cannonball shooting game built on top of the physics engine Matter.js',
                   `Leveraged "Operating System's transaction logging" idea to provide isolation in collision detection`,
-                  'Dockable to React web applications'
+                  'Compatible with React web applications'
                ]
             },
             {
@@ -103,9 +103,9 @@ const constants = {
                header: 'Band Together',
                subHeader: ['January - May, 2020' , 'Collaborated with Ben Lee, Saad Monem, Brendan Duff, Viknesh Alagappan'],
                cardContent: [
-                  'Android app providing a solution to musician matching system where location, correct resources(instruments), and ephemerality create difficulty',
+                  'Android app matching musicians based on location, time, and resources(instruments)',
                   'Prioritized search results by using user-based collaborative filtering',
-                  'Preset filter interface for  and faster search results'
+                  'Preset filter interface for faster search results'
                ]
             },
             {
@@ -120,8 +120,8 @@ const constants = {
                subHeader: ['December, 2019' , 'Collaborated with Rishi Patel, Alex Rai'],
                cardContent: [
                   'Wiki search engine thtat ranks search results based on "Term Frequency - Inverse Document Frequent" and PageRank scores',
-                  'Designed four-stage MapReduce pipeline to efficiently calculate inverted index by saving memory from storing over 30MB input into a data structure',
-                  ' Uses user-driven search weight interface for an additional filtering option'
+                  'Designed a four-stage MapReduce pipeline to calculate the inverted index - Saved memory by storing over 30MB input into a data structure',
+                  'Uses a user-driven search weight interface for an additional filtering option'
                ]
             }
          ]
