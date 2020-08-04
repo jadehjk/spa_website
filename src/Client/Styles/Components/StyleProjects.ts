@@ -5,7 +5,7 @@ export const projectWrapperStyles = {
 };
 
 export const imageStyle = {
-    paddingTop: '52.25%',
+    paddingTop: '57.25%',
     verticalAlign: 'middle',
     opacity: 1
  };
