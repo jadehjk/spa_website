@@ -17,7 +17,7 @@ const AboutMe: React.FC<{}> = () => {
 
    const {links: {github, linkedIn}, contents: {aboutMeContents}} = Constants;
 
-   const {profileCard: {title, subtitle, profileImgSrc, bodyContents, keynumberCards}} = aboutMeContents;
+   const {profileCard: {title, subtitle, profileImgSrc, bodyContents }} = aboutMeContents;
 
    const [resumeOpen, setResumeOpen] = React.useState<boolean>(false);
 
@@ -34,24 +34,24 @@ const AboutMe: React.FC<{}> = () => {
         ))
     };
 
-    const renderKeyNumberCard = ():ReadonlyArray<React.ReactNode> => {
-        // [important] use only 4 cards!!!
-        return keynumberCards.map((card, i) => (
-            <div className={classnames("col-sm-6", "col-md-3", "col-lg-6", "card-item-wrapper", `card${i}`)}>
-                <Card style={keynumberCardStyle}>
-                    <CardContent >
-                        <Typography variant="h4" component="h4">
-                            {card.keyNumber}
-                        </Typography>
-                        <Typography  color="textSecondary" style={keynumberTextStyle} gutterBottom>
-                            {card.text}
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </div>
-        ))
+    // const renderKeyNumberCard = ():ReadonlyArray<React.ReactNode> => {
+    //     // [important] use only 4 cards!!!
+    //     return keynumberCards.map((card, i) => (
+    //         <div className={classnames("col-sm-6", "col-md-3", "col-lg-6", "card-item-wrapper", `card${i}`)}>
+    //             <Card style={keynumberCardStyle}>
+    //                 <CardContent >
+    //                     <Typography variant="h4" component="h4">
+    //                         {card.keyNumber}
+    //                     </Typography>
+    //                     <Typography  color="textSecondary" style={keynumberTextStyle} gutterBottom>
+    //                         {card.text}
+    //                     </Typography>
+    //                 </CardContent>
+    //             </Card>
+    //         </div>
+    //     ))
 
-    };
+    // };
 
    return (
         <>
@@ -82,9 +82,9 @@ const AboutMe: React.FC<{}> = () => {
                         </Card>
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-4 card-row row">
+                {/* <div className="col-sm-12 col-md-12 col-lg-4 card-row row">
                     {renderKeyNumberCard()}
-                </div>
+                </div> */}
             </div>
             <div className="row links-wrapper">
                 <div className="col-sm-12 col-lg-4 link-item">
@@ -104,7 +104,7 @@ const AboutMe: React.FC<{}> = () => {
                 </div>
             </div>
             <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
-                <embed className="resume-dialog" src="Uploads/Resume_Jason Lee.pdf" width="100%" height="800px"/>
+                <embed className="resume-dialog" src="Uploads/resume.pdf" width="100%" height="800px"/>
             </Dialog>
             
         </>

@@ -6,13 +6,13 @@ const constants = {
       projects: '/projects'
    },
    strings: {
-      appbarTitle: 'Jason Lee'
+      appbarTitle: 'Jade Kim'
    },
    links: {
-      github: 'https://github.com/EunPyoLee/',
-      linkedIn: 'https://www.linkedin.com/in/eun-pyo-jason-lee-86466214b/'
+      github: 'https://github.com/jadehjk/',
+      linkedIn: 'https://www.linkedin.com/in/jadekim6565'
    },
-   email: 'eunpyolee0420@gmail.com',
+   email: 'hiimhajoo@gmail.com',
    contents:{
       homeContents: {
          homeImgSrc1: '/Media/Home/homeImage1.jpg',
@@ -22,19 +22,17 @@ const constants = {
       },
       aboutMeContents: {
          profileCard: {
-            title: 'Jason Lee',
+            title: 'Jade Kim',
             subtitle: [
                'Software Engineer',
                'University of Michigan B.S in Computer Science'
             ],
             profileImgSrc: '/Media/AboutMe/profile.jpg',
             bodyContents: [
-               'Summer Software Engineer Intern at Lingco Language Labs (2020)',
-               ' Hacker Fellows 2020 Intern (2020)',
-               'Ambassador at Edenchain (2018-2019)',
-               'Summer Business Development Team Intern at Edenchain (2018)',
-               'Sergeant Chief Auxiliary Police at Republic of Korea Auxiliary Police(2016-2018)',
-               'B.S in Computer Science at University of Michigan - Ann Arbor (Class of 2020)'
+               'Software Engineer II at Clinc (2019 - Present)',
+               'B.S in Computer Science at University of Michigan - Ann Arbor (2018)',
+               'Software Engineer Intern at Clinc (2018)',
+               'Research Intern at ATTO Research (2016)',
             ],
             // Use only 4 cards
             keynumberCards: [
@@ -69,7 +67,7 @@ const constants = {
                   controls: false
                },
                header: 'SPA Personal Website',
-               subHeader: ['August, 2020' , 'Collaborated with Jade Kim'],
+               subHeader: ['August, 2020' , 'Collaborated with Jason Lee'],
                cardContent: [
                   'Loads a single page and uses react-router to dynamically change contents',
                   'Styled with MaterialUI and custom CSS including flexble grid to support cross-browser compatibility',
@@ -90,38 +88,6 @@ const constants = {
                   'Cannonball shooting game built on top of the physics engine Matter.js',
                   `Leveraged "Operating System's transaction logging" idea to provide isolation in collision detection`,
                   'Compatible with React web applications'
-               ]
-            },
-            {
-               type: 'video',
-               src: '/Media/Projects/bandTogether.mp4',
-               videoOptions : {
-                  autoPlay: false,
-                  loop: false,
-                  controls: true
-               },
-               header: 'Band Together',
-               subHeader: ['January - May, 2020' , 'Collaborated with Ben Lee, Saad Monem, Brendan Duff, Viknesh Alagappan'],
-               cardContent: [
-                  'Android app matching musicians based on location, time, and resources(instruments)',
-                  'Prioritized search results by using user-based collaborative filtering',
-                  'Preset filter interface for faster search results'
-               ]
-            },
-            {
-               type: 'video',
-               src: '/Media/Projects/searchEngine.mp4',
-               videoOptions : {
-                  autoPlay: false,
-                  loop: false,
-                  controls: true
-               },
-               header: 'Wiki - Search Engine Project',
-               subHeader: ['December, 2019' , 'Collaborated with Rishi Patel, Alex Rai'],
-               cardContent: [
-                  'Wiki search engine thtat ranks search results based on "Term Frequency - Inverse Document Frequent" and PageRank scores',
-                  'Designed a four-stage MapReduce pipeline to calculate the inverted index - Saved memory by storing over 30MB input into a data structure',
-                  'Uses a user-driven search weight interface for an additional filtering option'
                ]
             }
          ]
