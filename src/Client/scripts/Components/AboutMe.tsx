@@ -104,7 +104,7 @@ const AboutMe: React.FC<{}> = () => {
                 </div>
             </div>
             <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
-                <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
+                <embed className="resume-dialog" src="Uploads/Resume_Jason Lee.pdf" width="100%" height="800px"/>
             </Dialog>
             
         </>

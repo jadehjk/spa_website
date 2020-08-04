@@ -52,7 +52,7 @@ const constants = {
                },
                {
                   keyNumber: '23',
-                  text: 'he was 23 when he first started programming after his internship at a blockchain Startup called "Edenchain"' 
+                  text: 'He was 23 when he first started programming after his internship at a blockchain Startup called "Edenchain"' 
                },
             ]
          }
@@ -80,9 +80,9 @@ const constants = {
                type: 'video',
                src: '/Media/Projects/JadeVSJason.mp4',
                videoOptions : {
-                  autoPlay: true,
-                  loop: true,
-                  controls: false
+                  autoPlay: false,
+                  loop: false,
+                  controls: true
                },
                header: 'Jade VS Jason',
                subHeader: ['May, 2020' , 'Collaborated with Jade Kim'],
@@ -112,9 +112,9 @@ const constants = {
                type: 'video',
                src: '/Media/Projects/searchEngine.mp4',
                videoOptions : {
-                  autoPlay: true,
-                  loop: true,
-                  controls: false
+                  autoPlay: false,
+                  loop: false,
+                  controls: true
                },
                header: 'Wiki - Search Engine Project',
                subHeader: ['December, 2019' , 'Collaborated with Rishi Patel, Alex Rai'],

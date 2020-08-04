@@ -67,7 +67,7 @@ const App: React.FC<{}> = () => {
 
    return (
       <BrowserRouter>
-         <AppBar className="appbar-wrapper" position="static" >
+         <AppBar className="appbar-wrapper" position="static">
             <Toolbar className="appbar-toolbar" style={appbarStyle}>
                <Grid container direction="row" style={appbarRowStyle}>
                   <Grid item xs={4}>
@@ -105,7 +105,7 @@ const App: React.FC<{}> = () => {
             </Toolbar>
          </AppBar>
          <Dialog fullWidth maxWidth='lg' open={resumeOpen} scroll='paper' onClose={handleResumeClick}>
-            <embed className="resume-dialog" src="Uploads/Resume_Eun Pyo Jason Lee.pdf" width="100%" height="800px"/>
+            <embed className="resume-dialog" src="Uploads/Resume_Jason Lee.pdf" width="100%" height="800px"/>
          </Dialog>
          <Switch>
             <Route exact path={home} component={Home} />
