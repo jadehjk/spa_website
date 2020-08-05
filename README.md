@@ -1,8 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Cross-browser compatible SPA Personal Website
 
-## Available Scripts
+This is a single page web application for a cross-browser compatible personal website built by [Jason Lee](https://github.com/EunPyoLee) and [Jade Kim](https://github.com/jadehjk)
 
-In the project directory, you can run:
+This project is built on top of [React](https://reactjs.org/) with [Typescript](https://www.typescriptlang.org/) and styled with [Material-UI](https://material-ui.com/) and custom CSS.
+
+The purpose of the project is to provide maintainable and user-friendly SPA web where an user can easily update information by updating a single `Constant` file or build more complex web on top of this. 
+
+<br/>
+
+## Mock-up designs
+
+### `App structure and Nav bar(app bar)`
+![](designImage/mockups/mockup1.jpg)
+
+### `Home and App bar`
+![](designImage/mockups/mockup1.jpg)
+
+### `Footer`
+![](designImage/mockups/mockup2.jpg)
+
+### `Home`
+![](designImage/mockups/mockup3.jpg)
+
+### `About Me`
+![](designImage/mockups/mockup4.jpg)
+
+### `Projects`
+![](designImage/mockups/mockup5.jpg)
+
+<br/>
+
+## Product Images
+
+### `[Home] - /`
+![](designImage/products/prod1.png)
+
+### `[About Me] - /aboutme`
+![](designImage/products/prod2.png)
+
+### `[Projects] - /projects`
+![](designImage/products/prod3.png)
+
+<br/>
+
+## Build
+
+### `git clone https://github.com/EunPyoLee/spa_website.git`
+
+Clones this project to your local
+
+### `yarn install`
+
+Installs the project dependencies
 
 ### `yarn start`
 
@@ -39,6 +88,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Learn More
 
+This project is bootstrapped with [Create React App](https://facebook.github.io/create-react-app/).
+
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
