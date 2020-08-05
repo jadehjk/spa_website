@@ -11,22 +11,19 @@ The purpose of the project is to provide maintainable and user-friendly SPA web 
 ## Mock-up designs
 
 ### `App structure and Nav bar(app bar)`
-![](designImage/mockups/mockup1.jpg)
-
-### `Home and App bar`
-![](designImage/mockups/mockup1.jpg)
+<img src="designImage/mockups/mockup1.jpg" width=400px >
 
 ### `Footer`
-![](designImage/mockups/mockup2.jpg)
+<img src="designImage/mockups/mockup2.jpg" width=400px >
 
 ### `Home`
-![](designImage/mockups/mockup3.jpg)
+<img src="designImage/mockups/mockup3.jpg" width=400px >
 
 ### `About Me`
-![](designImage/mockups/mockup4.jpg)
+<img src="designImage/mockups/mockup4.jpg" width=400px >
 
 ### `Projects`
-![](designImage/mockups/mockup5.jpg)
+<img src="designImage/mockups/mockup5.jpg" width=400px>
 
 <br/>
 
