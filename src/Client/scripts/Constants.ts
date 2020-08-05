@@ -72,7 +72,7 @@ const constants = {
                subHeader: ['August, 2020' , 'Collaborated with Jade Kim'],
                cardContent: [
                   'Loads a single page and uses react-router to dynamically change contents',
-                  'Styled with MaterialUI and custom CSS including flexble grid to support cross-browser compatibility',
+                  'Styled with Material-UI and custom CSS including flexble grid to support cross-browser compatibility',
                   'Easy to update and manage information by updating a single Constants file'
                ]
             },
