@@ -71,9 +71,9 @@ const constants = {
                header: 'SPA Personal Website',
                subHeader: ['August, 2020' , 'Collaborated with Jade Kim'],
                cardContent: [
-                  'Loads a single page and uses react-router to dynamically change contents',
-                  'Styled with Material-UI and custom CSS including flexble grid to support cross-browser compatibility',
-                  'Easy to update and manage information by updating a single Constants file'
+                  'A single page web app adaptable for future build-ups that uses react-router to dynamically change contents',
+                  'Styled with Material-UI and custom CSS including flexible grid to support cross-browser compatibility',
+                  'Improved maintainability and adaptability by modularizing components and separating out static data'
                ]
             },
             {
@@ -88,7 +88,7 @@ const constants = {
                subHeader: ['May, 2020' , 'Collaborated with Jade Kim'],
                cardContent: [
                   'Cannonball shooting game built on top of the physics engine Matter.js',
-                  `Leveraged "Operating System's transaction logging" idea to provide isolation in collision detection`,
+                  'Leveraged the concept of transaction logging used in operating systems to provide isolation in collision detection, delivering a solution for hit damage bug and an inconsistency in switching turn',
                   'Compatible with React web applications'
                ]
             },
@@ -120,8 +120,8 @@ const constants = {
                subHeader: ['December, 2019' , 'Collaborated with Rishi Patel, Alex Rai'],
                cardContent: [
                   'Wiki search engine thtat ranks search results based on "Term Frequency - Inverse Document Frequent" and PageRank scores',
-                  'Designed a four-stage MapReduce pipeline to calculate the inverted index - Saved memory by storing over 30MB input into a data structure',
-                  'Uses a user-driven search weight interface for an additional filtering option'
+                  'Uses a user-driven search weight interface for an additional filtering option',
+                  'Designed a four-stage MapReduce pipeline to calculate the inverted index - Saved memory by storing over 30MB input into a data structure'
                ]
             }
          ]
